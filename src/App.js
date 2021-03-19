@@ -1,4 +1,5 @@
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,10 +12,14 @@ import NotFound from './Components/NotFound/NotFound';
 import Destination from './Components/Destination/Destination';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Header from './Components/Header/Header';
+import { createContext, useState } from 'react';
 
+export const userContext = createContext()
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <div className="App">
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]} className="App">
+      <div>{loggedInUser.email && <h4>Welcome {loggedInUser.name || loggedInUser.email}</h4>}</div>
       <Router>
         <Header />
         <Switch>
@@ -27,7 +32,7 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <PrivateRoute path="/destination">
+          <PrivateRoute path="/display/:id">
             <Destination />
           </PrivateRoute>
           <Route exact path="/">
@@ -38,7 +43,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </userContext.Provider>
   );
 }
 

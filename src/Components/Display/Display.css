@@ -1,0 +1,17 @@
+.displayStyle{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    background-color: light-gray;
+    color: black;
+    border: 2px solid lightblue;
+}
+.displayStyle:hover{
+    background-color: lightgray;
+}
+.displayStyle h3{
+    padding-top: 20px;
+}
