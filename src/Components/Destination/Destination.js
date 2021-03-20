@@ -13,6 +13,8 @@ const Destination = () => {
     
     const { id } = useParams()
     const [destination, setDestination] = useState({})
+    const { vehicleDetails1, vehicleDetails2, vehicleDetails3, 
+        Cost1, Cost2, Cost3, riderName, vehiclePhoto } = destination;
     useEffect(() => {
         setDestination(ridersData[id - 1])
     }, [])
@@ -43,22 +45,22 @@ const Destination = () => {
                             </div>
                             <div>
                                 <div className="row justify-content-around d-fle bg-light mt-3 rounded py-2">
-                                    <div><img src={destination.vehiclePhoto} alt="" width="50px" /></div>
-                                    <div>{destination.riderName}</div>
-                                    <div>👨‍👨‍👦‍👦{destination.vehicleDetails}</div>
-                                    <div>${destination.Cost}</div>
+                                    <div><img src={vehiclePhoto} alt="" width="50px" /></div>
+                                    <div>{riderName}</div>
+                                    <div>👨‍👨‍👦‍👦{vehicleDetails1}</div>
+                                    <div>${Cost1}</div>
                                 </div>
                                 <div className="row justify-content-around d-fle bg-light mt-3 rounded py-2">
-                                    <div><img src={destination.vehiclePhoto} alt="" width="50px" /></div>
-                                    <div>{destination.riderName}</div>
-                                    <div>👨‍👨‍👦‍👦{destination.vehicleDetails}</div>
-                                    <div>${destination.Cost}</div>
+                                    <div><img src={vehiclePhoto} alt="" width="50px" /></div>
+                                    <div>{riderName}</div>
+                                    <div>👨‍👨‍{vehicleDetails2}</div>
+                                    <div>${Cost2}</div>
                                 </div>
                                 <div className="row justify-content-around d-fle bg-light mt-3 rounded py-2">
-                                    <div><img src={destination.vehiclePhoto} alt="" width="50px" /></div>
-                                    <div>{destination.riderName}</div>
-                                    <div>👨‍👨‍👦‍👦{destination.vehicleDetails}</div>
-                                    <div>${destination.Cost}</div>
+                                    <div><img src={vehiclePhoto} alt="" width="50px" /></div>
+                                    <div>{riderName}</div>
+                                    <div>👨‍{vehicleDetails3}</div>
+                                    <div>${Cost3}</div>
                                 </div>
                             </div>
                         </div>
