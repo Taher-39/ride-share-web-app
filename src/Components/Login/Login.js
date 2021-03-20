@@ -195,7 +195,7 @@ const Login = () => {
 
                     <p className="mt-3">
                         {newUser ? "Already have an account?" : "Don't have an account" } 
-                        <span onClick={() => setNewUser(!newUser)} className="text-info">{newUser ? "Login" : "Create an account"}</span> 
+                        <span onClick={() => setNewUser(!newUser)} className="text-info"> {newUser ? "Login" : "Create an account"}</span> 
                     </p>
 
                     {newUser && <div>

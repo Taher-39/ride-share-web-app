@@ -13,12 +13,13 @@ import Destination from './Components/Destination/Destination';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
+import Map from './Components/Map/Map';
 
 export const userContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <userContext.Provider value={[loggedInUser, setLoggedInUser]} className="App">
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
         <Switch>

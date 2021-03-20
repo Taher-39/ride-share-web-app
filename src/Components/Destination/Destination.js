@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import Map from '../../images/Map.png'
+import MapImg from '../../images/Map.png'
 import ridersData from '../../FakeData/FakeData.json'
-import './Destination.css'
+import './Destination.css';
+import Map from '../Map/Map';
 const Destination = () => {
-    // debugger;
     const [path, setPath] = useState(false)
     const [searchResult, setSearchResult] = useState({
         pickForm: "",
@@ -65,7 +65,6 @@ const Destination = () => {
                             </div>
                         </div>
                     : <div>
-                            <h4>Id {id}</h4>
                             <h5>Pick From</h5>
                             <input onBlur={handleBlur} className="form-control mb-2" type="text" name="pickFrom" id="" placeholder="Start destination" required />
                                 <h5>Pick To</h5>
@@ -76,7 +75,8 @@ const Destination = () => {
                     </form>
                 </div>
                 <div className="text-center ml-5 mt-3 map">
-                    <img src={Map} width="100%" min-height="80%" alt="" />
+                    <img src={MapImg} width="100%" min-height="80%" alt="" />
+                    {/* <Map width="100%" min-height="80%"></Map> */}
                 </div>
             </div>
         </div>
