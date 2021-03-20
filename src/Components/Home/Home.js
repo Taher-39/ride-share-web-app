@@ -9,11 +9,13 @@ const Home = () => {
         setRiders(ridersData)
     }, [])
     return (
-        <div className="container main-body">
-            <div className="row">
-                {
-                    riders.map(rider => <Display rider={rider} key={rider.id}></Display>)
-                }
+        <div height="100%">
+            <div className="container main-body">
+                <div className="row">
+                    {
+                        riders.map(rider => <Display rider={rider} key={rider.id}></Display>)
+                    }
+                </div>
             </div>
         </div>
     );

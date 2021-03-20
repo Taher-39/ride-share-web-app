@@ -1,24 +1,24 @@
 [{
   "id": 1,
-  "riderName": "bike",
+  "riderName": "Bike",
   "vehiclePhoto": "https://www.pinclipart.com/picdir/middle/237-2370953_group-vector-motorcycle-clipart.png",
   "vehicleDetails": "1",
   "Cost": "25"
 }, {
   "id": 2,
-  "riderName": "car",
+  "riderName": "Car",
   "vehiclePhoto": "https://www.pngitem.com/pimgs/m/210-2104647_blue-car-clipart-png-clip-arts-car-png.png",
   "vehicleDetails": "4",
   "Cost": "80"
 }, {
   "id": 3,
-  "riderName": "bus",
+  "riderName": "Bus",
   "vehiclePhoto": "https://www.seekpng.com/png/detail/251-2513538_bus-yellow-black-tour-bus-clip-art.png",
   "vehicleDetails": "4",
   "Cost": "70"
 }, {
   "id": 4,
-  "riderName": "train",
+  "riderName": "Train",
   "vehiclePhoto": "https://www.pngkit.com/png/detail/853-8539524_engine-clipart-metro-train.png",
   "vehicleDetails": "4",
   "Cost": "60"

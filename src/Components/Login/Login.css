@@ -5,8 +5,8 @@
     border: 1px solid lightgray;
     border-radius: 4px;
     box-shadow: 4px 4px 15px gray;
-    width: 500px;
-    height: 400px;
+    max-width: 500px;
+    min-height: 500px;
     margin: 0 auto;
 }
 .input-area {
@@ -24,4 +24,7 @@
 .other-option{
     width: 50%;
     margin: 0 auto;
+}
+.other-option button{
+    min-height: 50px;
 }

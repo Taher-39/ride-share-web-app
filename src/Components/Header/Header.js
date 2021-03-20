@@ -27,24 +27,6 @@ const Header = () => {
                     </ReactBootStrap.Nav>
                 </ReactBootStrap.Navbar.Collapse>
             </ReactBootStrap.Navbar>
-                    {/* <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to='/display/1'>Destination</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/login">{loggedInUser.email ? <h6>{loggedInUser.name || loggedInUser.email}</h6> : "Log In"}</Link>
-                            </li>
-                        </ul>
-
-                        <hr />
-                    </nav> */}
         </div>
     );
 };
