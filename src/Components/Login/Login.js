@@ -174,53 +174,57 @@ const Login = () => {
     }
     return (
         <div className="container main-area">
-            <div className="mt-4 mb-4 other-option">
+            <div className="my-4 other-option">
                 {
-                    loggedInUser.email &&
+                    loggedInUser.email ?
                     <button onClick={() => setLoggedInUser({})} className="form-control btn btn-info" >Sign Out</button>
+                    :
+                    <div>
+                            <div className="user">
+                                <div className="input-area">
+                                    <h4 className="mb-3">{newUser ? "Create an account" : "Log In"}</h4>
+                                    <form onSubmit={handleSubmit}>
+                                        {newUser && <input className="form-control mb-2" type="text" name="name" onBlur={handleBlur} placeholder="Your Name" id="#" required />}
+
+                                        <input className="form-control mb-2" type="email" onBlur={handleBlur} name="email" id="#" placeholder="Your email" required />
+
+                                        <input className="form-control mb-2" type="password" onBlur={handleBlur} name="password" id="#" placeholder="Your Password" required />
+                                        {newUser && <input className="form-control mb-2" type="password" onBlur={handleBlur} name="confirmPassword" id="#" placeholder="Confirm Password" required />}
+
+                                        <input className="form-control mb-2 btn btn-outline-info" type="submit" value={newUser ? "Create an account" : "Log In"} />
+
+                                        <p className="mt-3">
+                                            {newUser ? "Already have an account?" : "Don't have an account"}
+                                            <span onClick={() => setNewUser(!newUser)} className="text-info"> {newUser ? "Login" : "Create an account"}</span>
+                                        </p>
+
+                                        {newUser && <div>
+                                            <h5>Password Validation</h5>
+                                            <hr />
+                                            <p>
+                                                Password contain minimum one-number,
+                                                Minimum one-special character & length[6-12]
+                                            </p>
+                                        </div>}
+
+                                        <p className="text-danger">{user.error}</p>
+                                        {user.userCreated && <p className="text-info">User {newUser ? "Created" : "Logged In"} Successfully</p>}
+
+                                    </form>
+                                </div>
+
+                            </div>
+                            <h4 className="mt-4">Or</h4>
+                            <hr />
+                            <div className="other-option">
+                                <button className="rounded-pill form-control mb-2 btn btn-outline-danger" onClick={handleGoogleSignIn}>Continue With Google</button>
+                                <button className="rounded-pill form-control mb-2 btn btn-outline-primary" onClick={handleFbSignIn}>Continue With FaceBook</button>
+                                <button className="rounded-pill form-control mb-4 btn btn-outline-dark" onClick={handleGitSignIn}>Continue With GitHub</button>
+                            </div>
+                    </div>
                 }
             </div>
-            <div className="user">
-                <div className="input-area">
-                    <h4 className="mb-3">{newUser ? "Create an account" : "Log In"}</h4>
-                <form onSubmit={handleSubmit}>
-                    {newUser && <input className="form-control mb-2" type="text" name="name" onBlur={handleBlur} placeholder="Your Name" id="#" required />}
-
-                    <input className="form-control mb-2" type="email" onBlur={handleBlur} name="email" id="#" placeholder="Your email" required />
-
-                    <input className="form-control mb-2" type="password" onBlur={handleBlur} name="password" id="#" placeholder="Your Password" required />
-                    {newUser && <input className="form-control mb-2" type="password" onBlur={handleBlur} name="confirmPassword" id="#" placeholder="Confirm Password" required />}
-
-                    <input className="form-control mb-2 btn btn-outline-info" type="submit" value={newUser ? "Create an account" : "Log In"} />
-
-                    <p className="mt-3">
-                        {newUser ? "Already have an account?" : "Don't have an account" } 
-                        <span onClick={() => setNewUser(!newUser)} className="text-info"> {newUser ? "Login" : "Create an account"}</span> 
-                    </p>
-
-                    {newUser && <div>
-                            <h5>Password Validation</h5>
-                            <hr />
-                            <p>
-                                Password contain minimum one-number,
-                                Minimum one-special character & length[6-12]
-                            </p>
-                    </div>}
-
-                    <p className="text-danger">{user.error}</p>
-                    {user.userCreated && <p className="text-info">User {newUser ? "Created" : "Logged In"} Successfully</p>}
-
-                </form>
-                </div>
-               
-            </div>
-            <h4 className="mt-4">Or</h4>
-            <hr />
-            <div className="other-option">
-                <button className="rounded-pill form-control mb-2 btn btn-outline-success" onClick={handleGoogleSignIn}>Continue With Google</button>
-                <button className="rounded-pill form-control mb-2 btn btn-outline-primary" onClick={handleFbSignIn}>Continue With FaceBook</button>
-                <button className="rounded-pill form-control mb-4 btn btn-outline-dark" onClick={handleGitSignIn}>Continue With GitHub</button>
-            </div>
+            
         </div>
     );
 };

@@ -1,7 +1,7 @@
 [{
   "id": 1,
   "riderName": "Bike",
-  "vehiclePhoto": "https://www.pinclipart.com/picdir/middle/237-2370953_group-vector-motorcycle-clipart.png",
+  "vehiclePhoto": "https://i.ibb.co/Rcs7tRM/Frame.png",
   "vehicleDetails1": "3",
   "vehicleDetails2": "2",
   "vehicleDetails3": "1",
@@ -11,7 +11,7 @@
 }, {
   "id": 2,
   "riderName": "Car",
-  "vehiclePhoto": "https://www.pngitem.com/pimgs/m/210-2104647_blue-car-clipart-png-clip-arts-car-png.png",
+  "vehiclePhoto": "https://i.ibb.co/94sqsvG/Frame-2.png",
   "vehicleDetails1": "4",
   "vehicleDetails2": "2",
   "vehicleDetails3": "1",
@@ -21,7 +21,7 @@
 }, {
   "id": 3,
   "riderName": "Bus",
-  "vehiclePhoto": "https://www.seekpng.com/png/detail/251-2513538_bus-yellow-black-tour-bus-clip-art.png",
+  "vehiclePhoto": "https://i.ibb.co/5r3LjbQ/Frame-1.png",
   "vehicleDetails1": "4",
   "vehicleDetails2": "2",
   "vehicleDetails3": "1",
@@ -31,7 +31,7 @@
 }, {
   "id": 4,
   "riderName": "Train",
-  "vehiclePhoto": "https://www.pngkit.com/png/detail/853-8539524_engine-clipart-metro-train.png",
+  "vehiclePhoto": "https://i.ibb.co/mcfrtvZ/Group.png",
   "vehicleDetails1": "4",
   "vehicleDetails2": "2",
   "vehicleDetails3": "1",

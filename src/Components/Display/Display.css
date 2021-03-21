@@ -10,7 +10,7 @@
     border: 2px solid lightblue;
 }
 .displayStyle:hover{
-    background-color: rgba(251,251,251, 0.9);
+    background-color: rgba(251, 251, 251, 0.527);
 }
 .displayStyle h3{
     padding-top: 20px;

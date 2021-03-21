@@ -33,13 +33,13 @@ const Destination = () => {
     return (
         <div>
         <div className="container mt-4">
-            <div className="row col-sm-12 justify-content-center d-fle">
+            <div className="row col-md-12 justify-content-center d-fle">
                 <div className="search-bar bg-secondary p-4">
                     
                     <form onSubmit={handleSubmit}>
                     {path ?
                         <div>
-                            <div className="btn btn-info pl-5 pr-5">
+                            <div className="btn btn-info px-5">
                                 <p>{searchResult.pickFrom}</p>⇩
                                 <p>{searchResult.pickTo}</p>
                             </div>
@@ -74,13 +74,13 @@ const Destination = () => {
                     }    
                     </form>
                 </div>
-                <div className="text-center ml-5 mt-3 map">
-                    <img src={MapImg} width="100%" min-height="80%" alt="" />
+                <div className="text-center pl-4 pt-3 map">
+                    <img src={MapImg} width="80%" min-height="80%" alt="" />
                     {/* <Map width="100%" min-height="80%"></Map> */}
                 </div>
             </div>
         </div>
-            <footer className="container-fluid bg-info footer text-center mt-5">
+            <footer className="container-fluid bg-info footer text-center mt-5 mb-0">
                 <p className="pt-4 text-light">Copyright © 2021 by Abu Taher. All rights reserved.</p>
             </footer>
         </div>

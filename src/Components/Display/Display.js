@@ -8,7 +8,7 @@ const Display = (props) => {
         history.push(`/display/${id}`)
     }
     return (
-        <div className="col-md-3 col-sm-4 col-xm-6 d-flex justify-content-center mt-5">
+        <div className="col-md-6 col-sm-12 col-xl-3 d-flex justify-content-center mt-5">
             <div onClick={() => handleRide(id)} className="displayStyle">
                 <div>
                     <img src={vehiclePhoto} alt="" width="100%" />
