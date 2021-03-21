@@ -9,9 +9,9 @@ const Home = () => {
         setRiders(ridersData)
     }, [])
     return (
-        <div className="home">
+        <div className="home align-items-center d-flex">
             <div className="container main-body">
-                <h4 className="text-center pt-3 text-light">Choose your ride partner</h4>
+                <h1 className="text-center pt-2 text-light">Choose your ride partner</h1>
                 <div className="row">
                     {
                         riders.map(rider => <Display rider={rider} key={rider.id}></Display>)
